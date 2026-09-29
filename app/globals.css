@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* ===== Song Sát Tử Vi — hệ màu huyền học (tím / vàng kim / hồng đào) ===== */
+@theme {
+  --color-ss-night: #150f2b;
+  --color-ss-plum: #291a4d;
+  --color-ss-purple: #7c3aed;
+  --color-ss-violet: #a855f7;
+  --color-ss-magenta: #d946ef;
+  --color-ss-pink: #ec4899;
+  --color-ss-rose: #fbcfe8;
+  --color-ss-gold: #e7c86b;
+  --color-ss-gold-deep: #b8882f;
+  --color-ss-cream: #faf6ff;
+
+  --font-display: var(--font-display), Georgia, serif;
+  --font-sans: var(--font-body), system-ui, sans-serif;
+}
+
+:root {
+  --background: #faf7ff;
+  --foreground: #2a1a4a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+}
+
+/* Chữ gradient vàng kim cho tiêu đề */
+.text-gold-gradient {
+  background: linear-gradient(100deg, #f4e2a1, #e7c86b 40%, #b8882f 75%, #e7c86b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Nền đêm huyền học có ánh sao */
+.bg-mystic {
+  background:
+    radial-gradient(1200px 500px at 15% -10%, rgba(168, 85, 247, 0.35), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(217, 70, 239, 0.28), transparent 55%),
+    radial-gradient(700px 400px at 50% 110%, rgba(124, 58, 237, 0.3), transparent 60%),
+    linear-gradient(160deg, #1b1236, #150f2b 60%, #0f0a20);
+}
+
+/* Viền vàng mảnh */
+.ring-gold {
+  box-shadow: inset 0 0 0 1px rgba(231, 200, 107, 0.4);
+}
