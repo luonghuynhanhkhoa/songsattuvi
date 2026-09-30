@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import ServiceCard from "@/components/ServiceCard";
@@ -17,12 +18,18 @@ export default function HomePage() {
       {/* HERO */}
       <section className="bg-mystic relative overflow-hidden text-ss-cream">
         <div className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-28">
+          <Image
+            src="/logo-ss.jpg"
+            alt="Song Sát Tử Vi"
+            width={200}
+            height={200}
+            priority
+            className="mx-auto mb-6 h-40 w-40 rounded-full object-cover shadow-2xl ring-2 ring-ss-gold/40 sm:h-48 sm:w-48"
+          />
+          <h1 className="sr-only">Song Sát Tử Vi</h1>
           <span className="inline-flex items-center gap-2 rounded-full border border-ss-gold/40 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-ss-gold">
             ✦ {SITE.subTagline} ✦
           </span>
-          <h1 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-extrabold leading-tight sm:text-6xl">
-            Song Sát <span className="text-gold-gradient">Tử Vi</span>
-          </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base text-ss-cream/80 sm:text-lg">
             {SITE.tagline}. Luận giải tử vi · kinh dịch · bói bài · chỉ tay nhân
             tướng — giúp bạn hiểu mình, nắm vận và chủ động thay đổi cuộc sống.

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE } from "@/lib/site";
 
 export default function Footer() {
@@ -13,10 +14,14 @@ export default function Footer() {
     <footer className="bg-mystic mt-20 text-ss-cream/80">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-ss-purple to-ss-magenta text-lg">
-              🐰
-            </span>
+          <div className="flex items-center gap-2.5">
+            <Image
+              src="/logo-ss.jpg"
+              alt="Song Sát Tử Vi"
+              width={44}
+              height={44}
+              className="h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
+            />
             <span className="font-display text-lg font-bold text-ss-cream">
               Song Sát Tử Vi
             </span>

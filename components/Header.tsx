@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SITE } from "@/lib/site";
@@ -26,10 +27,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ss-purple/10 bg-ss-cream/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-ss-purple to-ss-magenta text-lg shadow-md">
-            🐰
-          </span>
+        <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          <Image
+            src="/logo-ss.jpg"
+            alt="Song Sát Tử Vi"
+            width={44}
+            height={44}
+            priority
+            className="h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
+          />
           <span className="font-display text-lg font-bold leading-tight text-ss-plum">
             Song Sát <span className="text-ss-magenta">Tử Vi</span>
           </span>

@@ -27,6 +27,12 @@ export default function ServiceCard({ s }: { s: Service }) {
       <h3 className="font-display text-xl font-bold text-ss-plum">{s.name}</h3>
       <p className="mt-1 text-sm text-ss-plum/60">{s.tagline}</p>
 
+      {s.note && (
+        <p className="mt-2 inline-block rounded-full bg-ss-magenta/8 px-2.5 py-1 text-xs font-medium text-ss-magenta">
+          🎁 {s.note}
+        </p>
+      )}
+
       <ul className="mt-4 flex-1 space-y-1.5 text-sm text-ss-plum/80">
         {s.bullets.map((b, i) => (
           <li key={i} className="flex gap-2">
