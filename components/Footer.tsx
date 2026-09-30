@@ -25,7 +25,24 @@ export default function Footer() {
               Song Sát Tử Vi
             </span>
           </div>
-          <p className="mt-3 text-sm text-ss-cream/70">{SITE.tagline}</p>
+          <p className="mt-3 text-sm leading-relaxed text-ss-cream/70">
+            {SITE.tagline.split("·").flatMap((part, i) =>
+              i === 0
+                ? [
+                    <span key={i} className="whitespace-nowrap">
+                      {part.trim()}
+                    </span>,
+                  ]
+                : [
+                    <span key={`sep-${i}`} className="text-ss-gold/50">
+                      {" · "}
+                    </span>,
+                    <span key={i} className="whitespace-nowrap">
+                      {part.trim()}
+                    </span>,
+                  ]
+            )}
+          </p>
         </div>
 
         <div>
