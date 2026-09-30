@@ -67,9 +67,10 @@ export default function BookingPage() {
           <p className="text-sm font-semibold text-ss-plum">
             💡 Khi nhắn, bạn gửi giúp Song Sát Tử Vi:
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-ss-plum/70">
+          <p className="mt-2 text-sm leading-relaxed text-balance text-ss-plum/70">
             Chia sẻ vấn đề đang gặp khó khăn hoặc điều mà bạn đang quan tâm nhất.
-            <br />
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-balance text-ss-plum/70">
             Song Sát sẽ hỗ trợ và tư vấn gói đúng và phù hợp với vấn đề của bạn.
           </p>
         </div>
