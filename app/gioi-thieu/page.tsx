@@ -49,10 +49,12 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
         <div className="prose-ss space-y-4 text-center text-ss-plum/80">
-          <p className="text-balance text-lg">
-            Mỗi người sinh ra đều mang một “lá số” riêng. Hiểu được nó, bạn sẽ
-            biết đâu là điểm mạnh để phát huy, đâu là điều cần hóa giải, và thời
-            điểm nào nên tiến, nên lùi.
+          <p className="text-lg leading-relaxed">
+            Mỗi người sinh ra đều mang một “lá số” riêng.
+            <br />
+            Hiểu được nó, bạn sẽ biết đâu là điểm mạnh
+            <br />
+            để phát huy, đâu là điều cần hóa giải và thời điểm nào nên tiến, nên lùi.
           </p>
           <p className="text-balance">
             Song Sát Tử Vi ra đời với mong muốn đưa huyền học đến gần hơn một
