@@ -1,11 +1,14 @@
 /**
  * Ảnh CẢM NHẬN khách hàng để chạy băng chuyền ngang.
- *
- * 👉 Cách thêm ảnh: bỏ file ảnh vào thư mục `public/feedback/` rồi liệt kê tên
- *    file ở mảng dưới đây (theo đúng thứ tự muốn hiện). Ví dụ:
- *      export const FEEDBACK_IMAGES = ["1.jpg", "2.jpg", "3.png"];
- *
- * Khi mảng còn TRỐNG, khu "Cảm nhận" sẽ tự chạy băng chuyền dạng chữ (trích dẫn)
- * cho tới khi anh Thỏ thêm ảnh thật.
+ * File ảnh nằm ở `public/feedback/`. Thêm/bớt ảnh: bỏ file vào thư mục đó rồi
+ * cập nhật danh sách tên dưới đây (đã tối ưu dung lượng, cao 760px).
  */
-export const FEEDBACK_IMAGES: string[] = [];
+export const FEEDBACK_IMAGES: string[] = [
+  "fb-01.jpg", "fb-02.jpg", "fb-03.jpg", "fb-04.jpg", "fb-05.jpg",
+  "fb-06.jpg", "fb-07.jpg", "fb-08.jpg", "fb-09.jpg", "fb-10.jpg",
+  "fb-11.jpg", "fb-12.jpg", "fb-13.jpg", "fb-14.jpg", "fb-15.jpg",
+  "fb-16.jpg", "fb-17.jpg", "fb-18.jpg", "fb-19.jpg", "fb-20.jpg",
+  "fb-21.jpg", "fb-22.jpg", "fb-23.jpg", "fb-24.jpg", "fb-25.jpg",
+  "fb-26.jpg", "fb-27.jpg", "fb-28.jpg", "fb-29.jpg", "fb-30.jpg",
+  "fb-31.jpg",
+];
