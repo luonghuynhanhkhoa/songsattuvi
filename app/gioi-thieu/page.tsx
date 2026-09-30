@@ -37,10 +37,12 @@ export default function AboutPage() {
           <p className="mx-auto mt-5 max-w-2xl text-balance text-base font-medium text-ss-cream sm:text-lg">
             {SITE.tagline}.
           </p>
-          <p className="mx-auto mt-2 max-w-2xl text-balance text-ss-cream/75">
-            Song Sát Tử Vi kết hợp tử vi, kinh dịch, bói bài và nhân tướng học để
-            giúp bạn nhìn rõ chính mình và con đường phía trước — <em>không xem
-            cho biết, mà xem để hiểu, tháo gỡ và định hướng.</em>
+          <p className="mx-auto mt-2 max-w-2xl leading-relaxed text-ss-cream/75">
+            Song Sát Tử Vi kết hợp tử vi, kinh dịch, bói bài và nhân tướng học
+            <br />
+            Giúp bạn nhìn rõ chính mình và con đường phía trước
+            <br />
+            <em>Không xem cho biết, mà xem để hiểu, tháo gỡ và định hướng.</em>
           </p>
         </div>
       </section>
