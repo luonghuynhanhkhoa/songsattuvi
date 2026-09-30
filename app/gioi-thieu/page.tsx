@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-import Testimonials from "@/components/Testimonials";
+import FeedbackGallery from "@/components/FeedbackGallery";
 
 export const metadata: Metadata = {
   title: "Giới thiệu",
@@ -88,7 +88,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Testimonials />
+      <FeedbackGallery />
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <div className="bg-mystic rounded-3xl px-6 py-12 text-center text-ss-cream sm:px-12">
