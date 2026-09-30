@@ -31,9 +31,12 @@ export default function HomePage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-ss-gold/40 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-ss-gold">
             ✦ {SITE.subTagline} ✦
           </span>
-          <p className="mx-auto mt-5 max-w-2xl text-base text-ss-cream/80 sm:text-lg">
-            {SITE.tagline}. Luận giải tử vi · kinh dịch · bói bài · chỉ tay nhân
-            tướng — giúp bạn hiểu mình, nắm vận và chủ động thay đổi cuộc sống.
+          <p className="mx-auto mt-5 max-w-2xl text-base font-medium text-ss-cream sm:text-lg">
+            {SITE.tagline}.
+          </p>
+          <p className="mx-auto mt-2 max-w-2xl text-base text-ss-cream/75 sm:text-lg">
+            Luận giải tử vi · kinh dịch · bói bài · chỉ tay nhân tướng — giúp bạn
+            hiểu mình, nắm vận và chủ động thay đổi cuộc sống.
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <Link
