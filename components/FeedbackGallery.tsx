@@ -26,7 +26,8 @@ export default function FeedbackGallery() {
             <img
               src={`/feedback/${src}`}
               alt={`Cảm nhận khách hàng ${i + 1}`}
-              className="h-72 w-auto rounded-2xl border border-ss-purple/12 object-cover shadow-md sm:h-80"
+              draggable={false}
+              className="logo-protected h-72 w-auto rounded-2xl border border-ss-purple/12 object-cover shadow-md sm:h-80"
             />
           </a>
         ))
