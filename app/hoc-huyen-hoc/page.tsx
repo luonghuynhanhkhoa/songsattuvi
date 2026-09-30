@@ -22,10 +22,13 @@ export default function LearnPage() {
           <h1 className="mt-4 font-display text-4xl font-extrabold sm:text-5xl">
             Học <span className="text-gold-gradient">Huyền Học</span> cùng Song Sát Tử Vi
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-ss-cream/80">
-            Không chỉ đi xem — bạn hoàn toàn có thể tự mình luận giải. Chương
-            trình học huyền học của Song Sát Tử Vi giúp bạn nắm vững tử vi, kinh dịch, bói
-            bài từ gốc rễ đến khi ứng dụng được cho chính mình và người thân.
+          <p className="mx-auto mt-5 max-w-2xl text-base font-medium text-ss-cream">
+            Không chỉ đi xem — bạn hoàn toàn có thể tự mình luận giải.
+          </p>
+          <p className="mx-auto mt-2 max-w-2xl text-ss-cream/75">
+            Chương trình học huyền học của Song Sát Tử Vi giúp bạn nắm vững tử
+            vi, kinh dịch, bói bài từ gốc rễ đến khi ứng dụng được cho chính
+            mình và người thân.
           </p>
           <a
             href={SITE.huyenHocUrl}
