@@ -7,7 +7,7 @@ import FeedbackGallery from "@/components/FeedbackGallery";
 
 const STEPS = [
   { n: "1", t: "Chọn gói", d: "Xem trước các gói và chọn gói phù hợp với điều bạn đang quan tâm." },
-  { n: "2", t: "Nhắn Facebook / Zalo", d: "Nhắn cho Song Sát Tử Vi gói bạn muốn xem cùng ngày & khung giờ mong muốn." },
+  { n: "2", t: "Nhắn Facebook / Zalo", d: "Bạn nhắn cho Song Sát Tử Vi để được tư vấn kỹ và chọn gói phù hợp." },
   { n: "3", t: "Xác nhận & xem", d: "Song Sát Tử Vi phản hồi, xác nhận lịch và đồng hành cùng bạn." },
 ];
 
