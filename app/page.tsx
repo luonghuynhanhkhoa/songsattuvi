@@ -25,7 +25,8 @@ export default function HomePage() {
             width={200}
             height={200}
             priority
-            className="mx-auto mb-6 h-40 w-40 rounded-full object-cover shadow-2xl ring-2 ring-ss-gold/40 sm:h-48 sm:w-48"
+            draggable={false}
+            className="logo-protected mx-auto mb-6 h-40 w-40 rounded-full object-cover shadow-2xl ring-2 ring-ss-gold/40 sm:h-48 sm:w-48"
           />
           <h1 className="sr-only">Song Sát Tử Vi</h1>
           <span className="inline-flex items-center gap-2 rounded-full border border-ss-gold/40 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-ss-gold">

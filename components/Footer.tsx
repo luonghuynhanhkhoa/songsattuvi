@@ -20,7 +20,8 @@ export default function Footer() {
               alt="Song Sát Tử Vi"
               width={44}
               height={44}
-              className="h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
+              draggable={false}
+              className="logo-protected h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
             />
             <Brand className="font-display text-lg font-bold" />
           </div>

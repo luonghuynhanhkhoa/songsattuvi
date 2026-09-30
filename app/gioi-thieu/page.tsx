@@ -28,27 +28,31 @@ export default function AboutPage() {
             alt="Song Sát Tử Vi"
             width={140}
             height={140}
-            className="mx-auto mb-5 h-28 w-28 rounded-full object-cover ring-2 ring-ss-gold/40"
+            draggable={false}
+            className="logo-protected mx-auto mb-5 h-28 w-28 rounded-full object-cover ring-2 ring-ss-gold/40"
           />
           <h1 className="font-display text-4xl font-extrabold sm:text-5xl">
             Về <Brand />
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-ss-cream/80">
-            {SITE.tagline}. Song Sát Tử Vi kết hợp tử vi, kinh dịch, bói bài và
-            nhân tướng học để giúp bạn nhìn rõ chính mình và con đường phía trước
-            — <em>không xem cho biết, mà xem để hiểu, tháo gỡ và định hướng.</em>
+          <p className="mx-auto mt-5 max-w-2xl text-balance text-base font-medium text-ss-cream sm:text-lg">
+            {SITE.tagline}.
+          </p>
+          <p className="mx-auto mt-2 max-w-2xl text-balance text-ss-cream/75">
+            Song Sát Tử Vi kết hợp tử vi, kinh dịch, bói bài và nhân tướng học để
+            giúp bạn nhìn rõ chính mình và con đường phía trước — <em>không xem
+            cho biết, mà xem để hiểu, tháo gỡ và định hướng.</em>
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
         <div className="prose-ss space-y-4 text-center text-ss-plum/80">
-          <p className="text-lg">
+          <p className="text-balance text-lg">
             Mỗi người sinh ra đều mang một “lá số” riêng. Hiểu được nó, bạn sẽ
             biết đâu là điểm mạnh để phát huy, đâu là điều cần hóa giải, và thời
             điểm nào nên tiến — nên lùi.
           </p>
-          <p>
+          <p className="text-balance">
             Song Sát Tử Vi ra đời với mong muốn đưa huyền học đến gần hơn một
             cách <strong className="text-ss-purple">tử tế, chính xác và dễ áp dụng</strong>.
             Không hù dọa, không mê tín — chỉ là những góc nhìn giúp bạn vững tâm

@@ -36,7 +36,8 @@ export default function Header() {
             width={44}
             height={44}
             priority
-            className="h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
+            draggable={false}
+            className="logo-protected h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
           />
           <Brand onLight className="font-display text-lg font-bold leading-tight" />
         </Link>
