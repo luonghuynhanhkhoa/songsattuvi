@@ -9,5 +9,5 @@ export const FEEDBACK_IMAGES: string[] = [
   "fb-11.jpg", "fb-12.jpg", "fb-13.jpg", "fb-14.jpg", "fb-15.jpg",
   "fb-16.jpg", "fb-17.jpg", "fb-18.jpg", "fb-19.jpg", "fb-20.jpg",
   "fb-21.jpg", "fb-22.jpg", "fb-23.jpg", "fb-24.jpg", "fb-25.jpg",
-  "fb-26.jpg", "fb-27.jpg", "fb-28.jpg", "fb-29.jpg", "fb-30.jpg",
+  "fb-26.jpg",
 ];
