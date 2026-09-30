@@ -57,7 +57,7 @@ export default function LearnPage() {
 
         <div className="mt-12 rounded-3xl border border-ss-gold/30 bg-gradient-to-br from-ss-cream to-white p-8 text-center">
           <h2 className="font-display text-2xl font-bold text-ss-plum">
-            Sẵn sàng khám phá huyền học?
+            Bạn đã sẵn sàng khám phá Huyền Học cùng Song Sát Tử Vi?
           </h2>
           <p className="mx-auto mt-2 max-w-lg text-sm text-ss-plum/70">
             Bấm nút bên dưới để mở ứng dụng học và bắt đầu hành trình của bạn.
