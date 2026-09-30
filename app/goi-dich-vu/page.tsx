@@ -17,7 +17,7 @@ export default function ServicesPage() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-ss-cream/80">
             Mỗi gói là một cách để bạn hiểu rõ hơn về bản thân và con đường phía
-            trước. Chọn gói phù hợp rồi đặt lịch — Thỏ sẽ đồng hành cùng bạn.
+            trước. Chọn gói phù hợp rồi đặt lịch — Song Sát Tử Vi sẽ đồng hành cùng bạn.
           </p>
         </div>
       </section>

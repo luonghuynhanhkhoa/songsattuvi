@@ -56,7 +56,7 @@ export default function FeedbackGallery() {
           Cảm nhận khách hàng
         </h2>
         <p className="mt-2 text-ss-plum/60">
-          Những phản hồi thật từ khách đã được Thỏ đồng hành.
+          Những phản hồi thật từ khách đã được Song Sát Tử Vi đồng hành.
         </p>
       </div>
 

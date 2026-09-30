@@ -33,8 +33,8 @@ export default function BookingPage() {
             Đặt lịch <span className="text-gold-gradient">xem</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-ss-cream/80">
-            Nhắn trực tiếp cho Thỏ qua <b>Facebook</b> hoặc <b>Zalo</b> để chốt
-            gói và khung giờ. Thỏ sẽ phản hồi và xác nhận lịch với bạn sớm nhất.
+            Nhắn trực tiếp cho Song Sát Tử Vi qua <b>Facebook</b> hoặc <b>Zalo</b> để chốt
+            gói và khung giờ. Song Sát Tử Vi sẽ phản hồi và xác nhận lịch với bạn sớm nhất.
           </p>
         </div>
       </section>
@@ -63,11 +63,11 @@ export default function BookingPage() {
 
         <div className="mt-8 rounded-2xl border border-ss-purple/15 bg-white p-5 text-center shadow-sm">
           <p className="text-sm font-semibold text-ss-plum">
-            💡 Khi nhắn, bạn gửi giúp Thỏ:
+            💡 Khi nhắn, bạn gửi giúp Song Sát Tử Vi:
           </p>
           <p className="mt-2 text-sm text-ss-plum/70">
             Gói muốn xem · Ngày &amp; khung giờ mong muốn · Điều bạn đang quan tâm
-            nhất — để Thỏ chuẩn bị và tư vấn đúng nhất cho bạn.
+            nhất — để Song Sát Tử Vi chuẩn bị và tư vấn đúng nhất cho bạn.
           </p>
         </div>
       </section>

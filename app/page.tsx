@@ -7,8 +7,8 @@ import FeedbackGallery from "@/components/FeedbackGallery";
 
 const STEPS = [
   { n: "1", t: "Chọn gói", d: "Xem trước các gói và chọn gói phù hợp với điều bạn đang quan tâm." },
-  { n: "2", t: "Nhắn Facebook / Zalo", d: "Nhắn cho Thỏ gói bạn muốn xem cùng ngày & khung giờ mong muốn." },
-  { n: "3", t: "Xác nhận & xem", d: "Thỏ phản hồi, xác nhận lịch và đồng hành cùng bạn." },
+  { n: "2", t: "Nhắn Facebook / Zalo", d: "Nhắn cho Song Sát Tử Vi gói bạn muốn xem cùng ngày & khung giờ mong muốn." },
+  { n: "3", t: "Xác nhận & xem", d: "Song Sát Tử Vi phản hồi, xác nhận lịch và đồng hành cùng bạn." },
 ];
 
 export default function HomePage() {
@@ -120,7 +120,7 @@ export default function HomePage() {
             Muốn tự mình <span className="text-gold-gradient">luận giải</span>?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-ss-cream/80">
-            Không chỉ xem — bạn có thể học huyền học bài bản cùng Thỏ, đi từ nền
+            Không chỉ xem — bạn có thể học huyền học bài bản cùng Song Sát Tử Vi, đi từ nền
             tảng đến ứng dụng thực chiến.
           </p>
           <Link

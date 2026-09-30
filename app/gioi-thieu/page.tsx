@@ -14,7 +14,7 @@ const WHY = [
   { icon: "🎯", t: "Luận giải có chiều sâu", d: "Không phán chung chung — đi vào bản chất, nguyên nhân và hướng đi cụ thể cho bạn." },
   { icon: "🗣️", t: "Trao đổi 1:1 riêng tư", d: "Nhắn tin / trò chuyện trực tiếp với người luận giải, thoải mái hỏi điều bạn đang vướng." },
   { icon: "🔒", t: "Bảo mật tuyệt đối", d: "Mọi thông tin bạn cung cấp được giữ kín, chỉ phục vụ cho buổi xem của bạn." },
-  { icon: "🤝", t: "Đồng hành lâu dài", d: "Thỏ ở đây để cùng bạn hiểu mình, nắm vận và chủ động thay đổi cuộc sống." },
+  { icon: "🤝", t: "Đồng hành lâu dài", d: "Song Sát Tử Vi ở đây để cùng bạn hiểu mình, nắm vận và chủ động thay đổi cuộc sống." },
 ];
 
 export default function AboutPage() {

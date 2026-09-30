@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Chị Hà",
     service: "Tình Yêu & Hôn Nhân",
     quote:
-      "Hiểu hơn về mối quan hệ hiện tại và biết mình nên làm gì tiếp theo. Cảm ơn Thỏ đã đồng hành.",
+      "Hiểu hơn về mối quan hệ hiện tại và biết mình nên làm gì tiếp theo. Cảm ơn Song Sát Tử Vi đã đồng hành.",
     stars: 5,
   },
 ];

@@ -4,12 +4,12 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Học Huyền Học",
   description:
-    "Đăng ký học huyền học bài bản cùng Thỏ — tử vi, kinh dịch, bói bài từ nền tảng đến thực chiến.",
+    "Đăng ký học huyền học bài bản cùng Song Sát Tử Vi — tử vi, kinh dịch, bói bài từ nền tảng đến thực chiến.",
 };
 
 const PERKS = [
   { icon: "📚", t: "Lộ trình bài bản", d: "Đi từ nền tảng đến ứng dụng thực chiến, dễ theo cho người mới." },
-  { icon: "🧑‍🏫", t: "Học cùng Thỏ", d: "Được hướng dẫn trực tiếp, giải đáp theo từng trường hợp thật." },
+  { icon: "🧑‍🏫", t: "Học cùng Song Sát Tử Vi", d: "Được hướng dẫn trực tiếp, giải đáp theo từng trường hợp thật." },
   { icon: "♾️", t: "Học lại trọn đời", d: "Ôn tập bất cứ lúc nào trên ứng dụng học huyền học." },
 ];
 
@@ -20,11 +20,11 @@ export default function LearnPage() {
         <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
           <div className="text-5xl">🎓</div>
           <h1 className="mt-4 font-display text-4xl font-extrabold sm:text-5xl">
-            Học <span className="text-gold-gradient">Huyền Học</span> cùng Thỏ
+            Học <span className="text-gold-gradient">Huyền Học</span> cùng Song Sát Tử Vi
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-ss-cream/80">
             Không chỉ đi xem — bạn hoàn toàn có thể tự mình luận giải. Chương
-            trình học huyền học của Thỏ giúp bạn nắm vững tử vi, kinh dịch, bói
+            trình học huyền học của Song Sát Tử Vi giúp bạn nắm vững tử vi, kinh dịch, bói
             bài từ gốc rễ đến khi ứng dụng được cho chính mình và người thân.
           </p>
           <a
@@ -36,7 +36,7 @@ export default function LearnPage() {
             Bắt đầu học ngay →
           </a>
           <p className="mt-3 text-xs text-ss-cream/50">
-            Mở ứng dụng học Huyền Học cùng Thỏ
+            Mở ứng dụng học Huyền Học cùng Song Sát Tử Vi
           </p>
         </div>
       </section>

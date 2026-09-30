@@ -8,7 +8,7 @@ export const SITE = {
   tagline: "Hiểu đúng vận mệnh · Đi đúng hướng · Sống đúng thời",
   subTagline: "Chọn gói phù hợp — Hiểu rõ vận mệnh",
   description:
-    "Song Sát Tử Vi — luận giải tử vi, kinh dịch, bói bài, chỉ tay nhân tướng. Đặt lịch xem, chọn gói phù hợp và đăng ký học huyền học cùng Thỏ.",
+    "Song Sát Tử Vi — luận giải tử vi, kinh dịch, bói bài, chỉ tay nhân tướng. Đặt lịch xem, chọn gói phù hợp và đăng ký học huyền học cùng Song Sát Tử Vi.",
 
   // Giá trị cốt lõi (hiện ở trang chủ + footer)
   values: [
