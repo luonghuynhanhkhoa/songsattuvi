@@ -52,12 +52,12 @@ export default function AboutPage() {
           <p className="text-balance text-lg">
             Mỗi người sinh ra đều mang một “lá số” riêng. Hiểu được nó, bạn sẽ
             biết đâu là điểm mạnh để phát huy, đâu là điều cần hóa giải, và thời
-            điểm nào nên tiến — nên lùi.
+            điểm nào nên tiến, nên lùi.
           </p>
           <p className="text-balance">
             Song Sát Tử Vi ra đời với mong muốn đưa huyền học đến gần hơn một
             cách <strong className="text-ss-purple">tử tế, chính xác và dễ áp dụng</strong>.
-            Không hù dọa, không mê tín — chỉ là những góc nhìn giúp bạn vững tâm
+            Không hù dọa, không mê tín, chỉ là những góc nhìn giúp bạn vững tâm
             hơn trước mỗi quyết định của đời mình.
           </p>
         </div>
