@@ -8,6 +8,7 @@ import { SITE } from "@/lib/site";
 
 const NAV = [
   { href: "/", label: "Trang chủ" },
+  { href: "/gioi-thieu", label: "Giới thiệu" },
   { href: "/goi-dich-vu", label: "Gói dịch vụ" },
   { href: "/dat-lich", label: "Đặt lịch" },
   { href: "/hoc-huyen-hoc", label: "Học Huyền Học" },

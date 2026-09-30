@@ -34,6 +34,7 @@ export default function Footer() {
             Khám phá
           </h4>
           <ul className="mt-3 space-y-2 text-sm">
+            <li><Link href="/gioi-thieu" className="hover:text-ss-gold">Giới thiệu</Link></li>
             <li><Link href="/goi-dich-vu" className="hover:text-ss-gold">Gói dịch vụ</Link></li>
             <li><Link href="/dat-lich" className="hover:text-ss-gold">Đặt lịch xem</Link></li>
             <li><Link href="/hoc-huyen-hoc" className="hover:text-ss-gold">Học Huyền Học</Link></li>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import ServiceCard from "@/components/ServiceCard";
+import Testimonials from "@/components/Testimonials";
 
 const STEPS = [
   { n: "1", t: "Chọn gói", d: "Xem trước các gói và chọn gói phù hợp với điều bạn đang quan tâm." },
@@ -107,6 +108,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* CẢM NHẬN KHÁCH HÀNG */}
+      <Testimonials />
 
       {/* HỌC HUYỀN HỌC */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
