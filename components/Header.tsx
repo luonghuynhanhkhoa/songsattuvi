@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SITE } from "@/lib/site";
+import Brand from "@/components/Brand";
 
 const NAV = [
   { href: "/", label: "Trang chủ" },
@@ -37,9 +38,7 @@ export default function Header() {
             priority
             className="h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
           />
-          <span className="font-display text-lg font-bold leading-tight text-ss-plum">
-            Song Sát <span className="text-ss-magenta">Tử Vi</span>
-          </span>
+          <Brand onLight className="font-display text-lg font-bold leading-tight" />
         </Link>
 
         {/* Desktop nav */}

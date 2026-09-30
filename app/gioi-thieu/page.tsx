@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import FeedbackGallery from "@/components/FeedbackGallery";
+import Brand from "@/components/Brand";
 
 export const metadata: Metadata = {
   title: "Giới thiệu",
@@ -30,7 +31,7 @@ export default function AboutPage() {
             className="mx-auto mb-5 h-28 w-28 rounded-full object-cover ring-2 ring-ss-gold/40"
           />
           <h1 className="font-display text-4xl font-extrabold sm:text-5xl">
-            Về <span className="text-gold-gradient">Song Sát Tử Vi</span>
+            Về <Brand />
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-ss-cream/80">
             {SITE.tagline}. Song Sát Tử Vi kết hợp tử vi, kinh dịch, bói bài và

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SITE } from "@/lib/site";
+import Brand from "@/components/Brand";
 
 export default function Footer() {
   const c = SITE.contact;
@@ -21,9 +22,7 @@ export default function Footer() {
               height={44}
               className="h-11 w-11 rounded-full object-cover ring-1 ring-ss-gold/40"
             />
-            <span className="font-display text-lg font-bold text-ss-cream">
-              Song Sát Tử Vi
-            </span>
+            <Brand className="font-display text-lg font-bold" />
           </div>
           <p className="mt-3 text-sm leading-relaxed text-ss-cream/70">
             {SITE.tagline.split("·").flatMap((part, i) =>

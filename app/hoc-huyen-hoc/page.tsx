@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
+import Brand from "@/components/Brand";
 
 export const metadata: Metadata = {
   title: "Học Huyền Học",
@@ -20,7 +21,7 @@ export default function LearnPage() {
         <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
           <div className="text-5xl">🎓</div>
           <h1 className="mt-4 font-display text-4xl font-extrabold sm:text-5xl">
-            Học <span className="text-gold-gradient">Huyền Học</span> cùng Song Sát Tử Vi
+            Học <span className="text-gold-gradient">Huyền Học</span> cùng <Brand />
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base font-medium text-ss-cream">
             Không chỉ đi xem — bạn hoàn toàn có thể tự mình luận giải.
