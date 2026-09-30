@@ -7,8 +7,8 @@ import Testimonials from "@/components/Testimonials";
 
 const STEPS = [
   { n: "1", t: "Chọn gói", d: "Xem trước các gói và chọn gói phù hợp với điều bạn đang quan tâm." },
-  { n: "2", t: "Chọn khung giờ", d: "Chọn ngày & khung giờ còn trống thuận tiện cho bạn." },
-  { n: "3", t: "Xác nhận", d: "Gửi yêu cầu — Thỏ xác nhận lịch và đồng hành cùng bạn." },
+  { n: "2", t: "Nhắn Facebook / Zalo", d: "Nhắn cho Thỏ gói bạn muốn xem cùng ngày & khung giờ mong muốn." },
+  { n: "3", t: "Xác nhận & xem", d: "Thỏ phản hồi, xác nhận lịch và đồng hành cùng bạn." },
 ];
 
 export default function HomePage() {
