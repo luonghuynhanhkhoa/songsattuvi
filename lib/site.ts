@@ -29,5 +29,5 @@ export const SITE = {
 
   // Link ngoài
   huyenHocUrl: "https://huyenhoccungthor.vercel.app", // App học Huyền Học
-  feedbackUrl: "#", // ⚠️ anh gửi link feedback sau, thay vào đây
+  feedbackUrl: "https://vt.tiktok.com/ZSDEM192f/", // Kênh TikTok cảm nhận khách hàng
 } as const;
