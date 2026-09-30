@@ -33,8 +33,9 @@ export default function BookingPage() {
             Đặt lịch <span className="text-gold-gradient">xem</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-ss-cream/80">
-            Nhắn trực tiếp cho Song Sát Tử Vi qua <b>Facebook</b> hoặc <b>Zalo</b> để chốt
-            gói và khung giờ. Song Sát Tử Vi sẽ phản hồi và xác nhận lịch với bạn sớm nhất.
+            Hãy nhắn tin trực tiếp cho Song Sát Tử Vi qua <b>Facebook</b> hoặc <b>Zalo</b> để
+            chia sẻ vấn đề mà bạn đang gặp khó khăn, Song Sát Tử Vi sẽ tư vấn kỹ và hỗ trợ
+            gói phù hợp cho bạn.
           </p>
         </div>
       </section>
