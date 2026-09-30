@@ -5,9 +5,8 @@ import { SITE } from "@/lib/site";
 export default function Footer() {
   const c = SITE.contact;
   const social = [
-    { href: c.zalo, label: "Zalo", show: c.zalo && c.zalo !== "#" },
-    { href: c.messenger, label: "Messenger", show: c.messenger && c.messenger !== "#" },
-    { href: c.fanpage, label: "Fanpage", show: c.fanpage && c.fanpage !== "#" },
+    { href: c.facebook, label: "Facebook", show: !!c.facebook },
+    { href: c.zalo, label: "Zalo", show: !!c.zalo },
   ].filter((s) => s.show);
 
   return (

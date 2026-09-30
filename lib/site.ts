@@ -17,11 +17,12 @@ export const SITE = {
     { icon: "🤝", title: "Đồng hành cùng bạn" },
   ],
 
-  // Liên hệ — ⚠️ THAY link thật của anh vào đây
+  // Liên hệ
   contact: {
-    zalo: "#", // vd https://zalo.me/0900000000
-    messenger: "#", // vd https://m.me/fanpage
-    fanpage: "#", // vd https://facebook.com/...
+    zalo: "https://zalo.me/0373608640",
+    facebook: "https://www.facebook.com/profile.php?id=61578761863277",
+    messenger: "", // để trống thì ẩn
+    fanpage: "", // để trống thì ẩn
     hotline: "", // vd 09xx xxx xxx (để trống thì ẩn)
     email: "", // tuỳ chọn
   },
