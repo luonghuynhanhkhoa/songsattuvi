@@ -1,7 +1,7 @@
 /**
  * Ảnh CẢM NHẬN khách hàng để chạy băng chuyền ngang.
- * File ảnh nằm ở `public/feedback/`. Thêm/bớt ảnh: bỏ file vào thư mục đó rồi
- * cập nhật danh sách tên dưới đây (đã tối ưu dung lượng, cao 760px).
+ * ⚠️ File này do scripts/sync-feedback.mjs TỰ SINH — đừng sửa tay.
+ * Muốn đổi ảnh: thay ảnh trong thư mục nguồn rồi chạy `npm run sync-feedback`.
  */
 export const FEEDBACK_IMAGES: string[] = [
   "fb-01.jpg", "fb-02.jpg", "fb-03.jpg", "fb-04.jpg", "fb-05.jpg",
@@ -10,5 +10,4 @@ export const FEEDBACK_IMAGES: string[] = [
   "fb-16.jpg", "fb-17.jpg", "fb-18.jpg", "fb-19.jpg", "fb-20.jpg",
   "fb-21.jpg", "fb-22.jpg", "fb-23.jpg", "fb-24.jpg", "fb-25.jpg",
   "fb-26.jpg", "fb-27.jpg", "fb-28.jpg", "fb-29.jpg", "fb-30.jpg",
-  "fb-31.jpg",
 ];
