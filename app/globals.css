@@ -105,7 +105,7 @@ body {
   display: flex;
   gap: 1.25rem;
   width: max-content;
-  animation: marquee-x 45s linear infinite;
+  animation: marquee-x 64s linear infinite; /* chậm hơn 30% so với 45s */
 }
 .marquee:hover .marquee-track {
   animation-play-state: paused;
