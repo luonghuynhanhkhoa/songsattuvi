@@ -1,27 +1,30 @@
 @import "tailwindcss";
 
-/* ===== Song Sát Tử Vi — hệ màu huyền học (tím / vàng kim / hồng đào) ===== */
+/* ===== Song Sát Tử Vi — hệ màu HỒNG PASTEL (theo poster) + burgundy + vàng kim =====
+   Giữ nguyên TÊN token cũ (ss-purple/magenta...) để mọi trang tự đổi màu theo.
+   ss-purple = hồng mâm xôi (màu nút chính) · ss-plum = burgundy đậm (chữ/tiêu đề). */
 @theme {
-  --color-ss-night: #150f2b;
-  --color-ss-plum: #291a4d;
-  --color-ss-purple: #7c3aed;
-  --color-ss-violet: #a855f7;
-  --color-ss-magenta: #d946ef;
-  --color-ss-pink: #ec4899;
-  --color-ss-rose: #fbcfe8;
-  --color-ss-gold: #e7c86b;
-  --color-ss-gold-deep: #b8882f;
+  --color-ss-night: #3a0a24;
+  --color-ss-plum: #5a0f36;
+  --color-ss-purple: #a3185f;
+  --color-ss-violet: #c2417c;
+  --color-ss-magenta: #e0457f;
+  --color-ss-pink: #f472a8;
+  --color-ss-rose: #fcc5d0;
+  --color-ss-blush: #ffe4e1;
+  --color-ss-gold: #f1c961;
+  --color-ss-gold-deep: #b8862b;
   --color-ss-logo-pink: #e0aaab;
   --color-ss-logo-pink-deep: #c9737f;
-  --color-ss-cream: #faf6ff;
+  --color-ss-cream: #fff6f3;
 
   --font-display: var(--font-display), Georgia, serif;
   --font-sans: var(--font-body), system-ui, sans-serif;
 }
 
 :root {
-  --background: #faf7ff;
-  --foreground: #2a1a4a;
+  --background: #fff6f3;
+  --foreground: #4a0e2e;
 }
 
 body {
@@ -39,13 +42,44 @@ body {
   color: transparent;
 }
 
-/* Nền đêm huyền học có ánh sao */
+/* Chữ gradient hồng→burgundy nhấn từ khoá trên nền sáng */
+.text-rose-gradient {
+  background: linear-gradient(100deg, #e0457f, #a3185f 60%, #7b1450);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Nền burgundy (khung tối của poster) — footer, banner, tiêu đề trang con */
 .bg-mystic {
   background:
-    radial-gradient(1200px 500px at 15% -10%, rgba(168, 85, 247, 0.35), transparent 60%),
-    radial-gradient(900px 500px at 100% 10%, rgba(217, 70, 239, 0.28), transparent 55%),
-    radial-gradient(700px 400px at 50% 110%, rgba(124, 58, 237, 0.3), transparent 60%),
-    linear-gradient(160deg, #1b1236, #150f2b 60%, #0f0a20);
+    radial-gradient(1100px 480px at 12% -10%, rgba(244, 114, 168, 0.35), transparent 60%),
+    radial-gradient(900px 480px at 100% 10%, rgba(241, 201, 97, 0.14), transparent 55%),
+    radial-gradient(700px 400px at 50% 115%, rgba(224, 69, 127, 0.3), transparent 60%),
+    linear-gradient(160deg, #6a1141, #4d0b2e 60%, #36061f);
+}
+
+/* Nền hồng pastel mây khói cho phần mở đầu trang chủ */
+.bg-blush {
+  background:
+    radial-gradient(900px 420px at 8% -8%, rgba(252, 165, 190, 0.7), transparent 60%),
+    radial-gradient(800px 420px at 100% 0%, rgba(255, 214, 170, 0.55), transparent 55%),
+    radial-gradient(700px 360px at 50% 100%, rgba(252, 197, 208, 0.55), transparent 60%),
+    linear-gradient(180deg, #ffe3e0, #fff1ed 70%, #fff6f3);
+}
+
+/* Lấp lánh nhẹ trang trí */
+.sparkle {
+  position: absolute;
+  color: var(--color-ss-gold);
+  animation: twinkle 3.2s ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.1); }
 }
 
 /* Viền vàng mảnh */
@@ -81,4 +115,5 @@ body {
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
+  .sparkle { animation: none; opacity: 0.7; }
 }

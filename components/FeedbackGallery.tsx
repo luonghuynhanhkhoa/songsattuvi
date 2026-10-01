@@ -8,7 +8,15 @@ import { SITE } from "@/lib/site";
  * - Chưa có ảnh -> chạy băng các trích dẫn (chữ) để khu vẫn sống động.
  * Rê chuột để tạm dừng. Danh sách được render 2 lần để vòng lặp mượt (translateX -50%).
  */
-export default function FeedbackGallery() {
+export default function FeedbackGallery({
+  title = "Cảm nhận khách hàng",
+  subtitle = "Những phản hồi thật từ khách đã được Song Sát Tử Vi đồng hành.",
+  className = "py-16",
+}: {
+  title?: string;
+  subtitle?: string;
+  className?: string;
+}) {
   const hasImages = FEEDBACK_IMAGES.length > 0;
   const tiktok = SITE.feedbackUrl;
 
@@ -27,7 +35,7 @@ export default function FeedbackGallery() {
               src={`/feedback/${src}`}
               alt={`Cảm nhận khách hàng ${i + 1}`}
               draggable={false}
-              className="logo-protected h-72 w-auto rounded-2xl border border-ss-purple/12 object-cover shadow-md sm:h-80"
+              className="logo-protected h-64 w-auto rounded-2xl border border-ss-purple/12 object-cover shadow-md sm:h-80"
             />
           </a>
         ))
@@ -51,17 +59,17 @@ export default function FeedbackGallery() {
         ));
 
   return (
-    <section className="overflow-hidden py-16">
+    <section className={`overflow-hidden ${className}`}>
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-ss-plum sm:text-4xl">
-          Cảm nhận khách hàng
+        <h2 className="font-display text-2xl font-bold text-ss-plum sm:text-4xl">
+          {title}
         </h2>
         <p className="mt-2 text-ss-plum/60">
-          Những phản hồi thật từ khách đã được Song Sát Tử Vi đồng hành.
+          {subtitle}
         </p>
       </div>
 
-      <div className="marquee mt-10">
+      <div className="marquee mt-6 sm:mt-10">
         <div className="marquee-track">
           {renderCards("a")}
           {renderCards("b")}
