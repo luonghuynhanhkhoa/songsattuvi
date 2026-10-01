@@ -266,7 +266,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
               href={SITE.contact.zalo}
               target="_blank"
@@ -274,6 +274,14 @@ export default function HomePage() {
               className="inline-block rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-7 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105"
             >
               💬 Nhắn Zalo tư vấn miễn phí
+            </a>
+            <a
+              href={SITE.contact.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-7 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105"
+            >
+              📘 Nhắn Facebook tư vấn miễn phí
             </a>
           </div>
         </div>
