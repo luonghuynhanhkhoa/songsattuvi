@@ -149,7 +149,7 @@ export const SERVICES: Service[] = [
   {
     slug: "tinh-yeu-hon-nhan",
     name: "Tình Yêu & Hôn Nhân",
-    price: 150000,
+    price: 209000,
     tagline: "Hiểu mình trong tình cảm — Gắn bó đúng người",
     icon: "💖",
     bullets: [
@@ -165,7 +165,7 @@ export const SERVICES: Service[] = [
   {
     slug: "su-nghiep-tai-chinh",
     name: "Sự Nghiệp – Tài Chính",
-    price: 150000,
+    price: 209000,
     tagline: "Chọn đúng hướng đi — Giữ vững đường tiền",
     icon: "💼",
     bullets: [
@@ -181,7 +181,7 @@ export const SERVICES: Service[] = [
   {
     slug: "hoc-tap-phat-trien",
     name: "Học Tập & Phát Triển",
-    price: 150000,
+    price: 209000,
     tagline: "Đúng năng lực — Đúng con đường",
     icon: "📚",
     bullets: [
@@ -197,7 +197,7 @@ export const SERVICES: Service[] = [
   {
     slug: "sinh-san-con-cai",
     name: "Sinh Sản – Con Cái",
-    price: 150000,
+    price: 209000,
     tagline: "Hiểu duyên con cái — Lên kế hoạch đúng thời",
     icon: "👶",
     bullets: [
@@ -214,7 +214,7 @@ export const SERVICES: Service[] = [
   {
     slug: "nha-cua-dat-dai",
     name: "Nhà Cửa – Đất Đai",
-    price: 150000,
+    price: 209000,
     tagline: "An cư lạc nghiệp — Biết khi nào nên mua",
     icon: "🏠",
     bullets: [
@@ -230,7 +230,7 @@ export const SERVICES: Service[] = [
   {
     slug: "xuat-ngoai",
     name: "Xuất Ngoại",
-    price: 150000,
+    price: 209000,
     tagline: "Đi xa đúng thời — Ít trắc trở",
     icon: "✈️",
     bullets: [
