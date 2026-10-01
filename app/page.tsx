@@ -112,36 +112,6 @@ export default function HomePage() {
           subtitle="Phản hồi thật — bấm vào ảnh để xem thêm trên TikTok."
         />
 
-        <div className="relative mx-auto max-w-5xl px-4 pb-12 sm:px-6">
-          <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
-            {TRUST.map((t) => (
-              <li
-                key={t.t}
-                className="bg-mystic relative flex items-start gap-3.5 overflow-hidden rounded-2xl p-4 shadow-xl shadow-ss-plum/25 ring-1 ring-ss-gold/60 sm:flex-col sm:items-center sm:p-5 sm:text-center"
-              >
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-ss-gold to-ss-gold-deep text-2xl shadow-md ring-2 ring-white/30">
-                  {t.icon}
-                </span>
-                <span className="block">
-                  <span className="text-gold-gradient block font-display text-lg font-extrabold leading-snug text-balance">
-                    {t.t}
-                  </span>
-                  <span className="mt-1 block text-sm leading-relaxed text-ss-cream/85">
-                    <Copy text={t.d} />
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-7 text-center">
-            <Link
-              href="/dat-lich"
-              className="inline-block whitespace-nowrap rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-ss-magenta/30 transition-transform hover:scale-105"
-            >
-              Đặt lịch ngay — tư vấn miễn phí
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* BẠN ĐANG BĂN KHOĂN ĐIỀU GÌ — 2 gói nên xem đứng đầu */}
@@ -246,6 +216,40 @@ export default function HomePage() {
           >
             Xem tất cả gói →
           </Link>
+        </div>
+      </section>
+
+      {/* 3 CAM KẾT UY TÍN */}
+      <section className="pt-2">
+        <div className="relative mx-auto max-w-5xl px-4 pb-12 sm:px-6">
+          <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+            {TRUST.map((t) => (
+              <li
+                key={t.t}
+                className="bg-mystic relative flex items-start gap-3.5 overflow-hidden rounded-2xl p-4 shadow-xl shadow-ss-plum/25 ring-1 ring-ss-gold/60 sm:flex-col sm:items-center sm:p-5 sm:text-center"
+              >
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-ss-gold to-ss-gold-deep text-2xl shadow-md ring-2 ring-white/30">
+                  {t.icon}
+                </span>
+                <span className="block">
+                  <span className="text-gold-gradient block font-display text-lg font-extrabold leading-snug text-balance">
+                    {t.t}
+                  </span>
+                  <span className="mt-1 block text-sm leading-relaxed text-ss-cream/85">
+                    <Copy text={t.d} />
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-7 text-center">
+            <Link
+              href="/dat-lich"
+              className="inline-block whitespace-nowrap rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-ss-magenta/30 transition-transform hover:scale-105"
+            >
+              Đặt lịch ngay — tư vấn miễn phí
+            </Link>
+          </div>
         </div>
       </section>
 
