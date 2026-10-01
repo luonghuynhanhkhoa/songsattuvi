@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 import Brand from "@/components/Brand";
+import Copy from "@/components/Copy";
 
 export const metadata: Metadata = {
   title: "Học Huyền Học",
@@ -21,15 +22,14 @@ export default function LearnPage() {
         <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
           <div className="text-5xl">🎓</div>
           <h1 className="mt-4 font-display text-4xl font-extrabold sm:text-5xl">
-            Học <span className="text-gold-gradient">Huyền Học</span> cùng <Brand />
+            Học <span className="whitespace-nowrap text-gold-gradient">Huyền Học</span> cùng <Brand />
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base font-medium text-ss-cream">
-            Không chỉ đi xem — bạn hoàn toàn có thể tự mình luận giải.
+            <Copy text="Không chỉ đi xem — bạn hoàn toàn có thể tự mình luận giải." />
           </p>
           <p className="mx-auto mt-2 max-w-2xl text-ss-cream/75">
-            Chương trình học huyền học của Song Sát Tử Vi giúp bạn nắm vững tử
-            vi, kinh dịch, bói bài từ gốc rễ đến khi ứng dụng được cho chính
-            mình và người thân.
+            <Copy text="Chương trình học huyền học của Song Sát Tử Vi giúp bạn nắm vững tử vi, kinh dịch, bói bài từ gốc rễ," />{" "}
+            <Copy text="đến khi ứng dụng được cho chính mình và người thân." />
           </p>
           <a
             href={SITE.huyenHocUrl}
@@ -40,7 +40,7 @@ export default function LearnPage() {
             Bắt đầu học ngay →
           </a>
           <p className="mt-3 text-xs text-ss-cream/50">
-            Mở ứng dụng học Huyền Học cùng Song Sát Tử Vi
+            <Copy text="Mở ứng dụng học Huyền Học cùng Song Sát Tử Vi" />
           </p>
         </div>
       </section>
@@ -50,18 +50,18 @@ export default function LearnPage() {
           {PERKS.map((p) => (
             <div key={p.t} className="rounded-2xl border border-ss-purple/12 bg-white p-6 text-center shadow-sm">
               <div className="text-3xl">{p.icon}</div>
-              <h3 className="mt-3 font-display text-lg font-bold text-ss-plum">{p.t}</h3>
-              <p className="mt-1.5 text-sm text-ss-plum/70">{p.d}</p>
+              <h3 className="mt-3 font-display text-lg font-bold text-ss-plum text-balance">{p.t}</h3>
+              <p className="mt-1.5 text-sm text-ss-plum/70"><Copy text={p.d} /></p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 rounded-3xl border border-ss-gold/30 bg-gradient-to-br from-ss-cream to-white p-8 text-center">
-          <h2 className="font-display text-2xl font-bold text-ss-plum">
-            Bạn đã sẵn sàng khám phá Huyền Học cùng Song Sát Tử Vi?
+          <h2 className="font-display text-2xl font-bold text-ss-plum text-balance">
+            <Copy text="Bạn đã sẵn sàng khám phá Huyền Học cùng Song Sát Tử Vi?" />
           </h2>
           <p className="mx-auto mt-2 max-w-lg text-sm text-ss-plum/70">
-            Bấm nút bên dưới để mở ứng dụng học và bắt đầu hành trình của bạn.
+            <Copy text="Bấm nút bên dưới để mở ứng dụng học và bắt đầu hành trình của bạn." />
           </p>
           <a
             href={SITE.huyenHocUrl}

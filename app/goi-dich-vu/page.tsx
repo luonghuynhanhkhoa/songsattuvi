@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SERVICES } from "@/lib/services";
 import ServiceCard from "@/components/ServiceCard";
+import Copy from "@/components/Copy";
 
 export const metadata: Metadata = {
   title: "Gói dịch vụ",
@@ -16,8 +17,8 @@ export default function ServicesPage() {
             Các gói <span className="text-gold-gradient">dịch vụ</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-ss-cream/80">
-            Mỗi gói là một cách để bạn hiểu rõ hơn về bản thân và con đường phía
-            trước. Chọn gói phù hợp rồi đặt lịch — Song Sát Tử Vi sẽ đồng hành cùng bạn.
+            <Copy text="Mỗi gói là một cách để bạn hiểu rõ hơn về bản thân và con đường phía trước." />{" "}
+            <Copy text="Chọn gói phù hợp rồi đặt lịch — Song Sát Tử Vi sẽ đồng hành cùng bạn." />
           </p>
         </div>
       </section>
@@ -29,9 +30,10 @@ export default function ServicesPage() {
           ))}
         </div>
         <p className="mt-10 text-center text-sm text-ss-plum/50">
-          Giá có thể thay đổi theo chương trình. Cần tư vấn chọn gói? Bấm{" "}
-          <span className="font-semibold text-ss-purple">Đặt lịch</span> để được
-          hỗ trợ.
+          <Copy text="Giá có thể thay đổi theo chương trình." />{" "}
+          <Copy text="Cần tư vấn chọn gói?" /> <Copy text="Bấm" />{" "}
+          <span className="inline-block font-semibold text-ss-purple">Đặt lịch</span>{" "}
+          <Copy text="để được hỗ trợ." />
         </p>
       </section>
     </>

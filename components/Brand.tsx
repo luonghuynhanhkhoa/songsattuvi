@@ -13,10 +13,10 @@ export default function Brand({
 }) {
   return (
     <span className={className}>
-      <span className={onLight ? "text-ss-logo-pink-deep" : "text-ss-logo-pink"}>
+      <span className={`whitespace-nowrap ${onLight ? "text-ss-logo-pink-deep" : "text-ss-logo-pink"}`}>
         Song Sát
       </span>{" "}
-      <span className={onLight ? "text-ss-gold-deep" : "text-ss-gold"}>Tử Vi</span>
+      <span className={`whitespace-nowrap ${onLight ? "text-ss-gold-deep" : "text-ss-gold"}`}>Tử Vi</span>
     </span>
   );
 }

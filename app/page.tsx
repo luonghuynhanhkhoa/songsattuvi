@@ -3,6 +3,7 @@ import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import ServiceCard from "@/components/ServiceCard";
 import FeedbackGallery from "@/components/FeedbackGallery";
+import Copy from "@/components/Copy";
 
 const STEPS = [
   { n: "1", t: "Chọn gói", d: "Xem trước các gói và chọn gói phù hợp với điều bạn đang quan tâm." },
@@ -21,9 +22,9 @@ const WORRIES = [
 ];
 
 const TRUST = [
-  { icon: "🔒", t: "Bảo mật tuyệt đối" },
-  { icon: "💬", t: "Tư vấn chọn gói miễn phí" },
-  { icon: "✨", t: "Xem 1 lần — đỡ sai nhiều lần" },
+  { icon: "🔒", t: "Bảo mật tuyệt đối", d: "Thông tin của bạn được giữ kín 100%, chỉ dùng cho buổi xem." },
+  { icon: "💬", t: "Tư vấn chọn gói miễn phí", d: "Inbox ngay để được tư vấn gói phù hợp, không mất phí." },
+  { icon: "✨", t: "Xem 1 lần — đỡ sai nhiều lần", d: "Hiểu tổng thể cuộc đời thay vì xem lẻ từng phần." },
 ];
 
 export default function HomePage() {
@@ -39,31 +40,35 @@ export default function HomePage() {
         <span className="sparkle right-[16%] top-[38%] hidden text-2xl [animation-delay:0.6s] sm:block" aria-hidden>✦</span>
 
         <div className="relative mx-auto max-w-4xl px-4 pb-2 pt-6 text-center sm:px-6 sm:pt-14">
-          <span className="inline-flex items-center gap-2 rounded-full border border-ss-gold-deep/30 bg-white/70 px-4 py-1.5 text-xs font-semibold tracking-wide text-ss-gold-deep shadow-sm">
+          <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-ss-gold-deep/30 bg-white/70 px-3 py-1.5 text-[11px] font-semibold sm:px-4 sm:text-xs tracking-wide text-ss-gold-deep shadow-sm">
             ✦ Tử Vi · Kinh Dịch · Bói Bài · Chỉ Tay ✦
           </span>
 
           <h1 className="mt-4 font-display text-[1.65rem] font-extrabold leading-[1.2] text-ss-plum text-balance sm:text-5xl">
             <span className="sr-only">Song Sát Tử Vi — </span>
-            Bạn có bao giờ tự hỏi: vì sao mình cứ{" "}
-            <span className="text-rose-gradient">lặp lại những chuyện giống nhau?</span>
+            <Copy text="Bạn có bao giờ tự hỏi:" />{" "}
+            <span className="inline-block text-balance">
+              vì sao mình cứ{" "}
+              <span className="text-rose-gradient">lặp lại những chuyện giống nhau?</span>
+            </span>
           </h1>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm text-ss-plum/75 text-balance sm:mt-4 sm:text-lg">
-            Câu trả lời nằm ngay trong lá số của bạn. Song Sát Tử Vi giúp bạn
-            hiểu mình đến tận gốc — <b className="font-semibold text-ss-plum">không phán đoán chung chung</b>.
+            <Copy text="Câu trả lời nằm ngay trong lá số của bạn." />{" "}
+            <Copy text="Song Sát Tử Vi giúp bạn hiểu mình đến tận gốc," />{" "}
+            <b className="inline-block font-semibold text-ss-plum">không phán đoán chung chung.</b>
           </p>
 
-          <div className="mt-5 flex items-center justify-center gap-2.5 sm:mt-7 sm:gap-3">
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5 sm:mt-7 sm:gap-3">
             <Link
               href="/dat-lich"
-              className="rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-5 py-3 text-sm font-bold text-white shadow-lg shadow-ss-magenta/30 sm:px-8 sm:py-3.5 sm:text-base transition-transform hover:scale-105"
+              className="whitespace-nowrap rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-5 py-3 text-sm font-bold text-white shadow-lg shadow-ss-magenta/30 sm:px-8 sm:py-3.5 sm:text-base transition-transform hover:scale-105"
             >
               Đặt lịch xem ngay
             </Link>
             <Link
               href="/goi-dich-vu"
-              className="rounded-full border-2 border-ss-purple/30 bg-white/60 px-5 py-2.5 text-sm font-semibold sm:px-7 sm:py-3.5 sm:text-base text-ss-purple transition-colors hover:bg-white"
+              className="whitespace-nowrap rounded-full border-2 border-ss-purple/30 bg-white/60 px-5 py-2.5 text-sm font-semibold sm:px-7 sm:py-3.5 sm:text-base text-ss-purple transition-colors hover:bg-white"
             >
               Xem bảng giá
             </Link>
@@ -78,15 +83,35 @@ export default function HomePage() {
           subtitle="Phản hồi thật — bấm vào ảnh để xem thêm trên TikTok."
         />
 
-        <div className="relative mx-auto max-w-4xl px-4 pb-10 text-center sm:px-6">
-          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-ss-plum/75">
+        <div className="relative mx-auto max-w-5xl px-4 pb-12 sm:px-6">
+          <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
             {TRUST.map((t) => (
-              <li key={t.t} className="flex items-center gap-1.5">
-                <span aria-hidden>{t.icon}</span>
-                {t.t}
+              <li
+                key={t.t}
+                className="bg-mystic relative flex items-start gap-3.5 overflow-hidden rounded-2xl p-4 shadow-xl shadow-ss-plum/25 ring-1 ring-ss-gold/60 sm:flex-col sm:items-center sm:p-5 sm:text-center"
+              >
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-ss-gold to-ss-gold-deep text-2xl shadow-md ring-2 ring-white/30">
+                  {t.icon}
+                </span>
+                <span className="block">
+                  <span className="text-gold-gradient block font-display text-lg font-extrabold leading-snug text-balance">
+                    {t.t}
+                  </span>
+                  <span className="mt-1 block text-sm leading-relaxed text-ss-cream/85">
+                    <Copy text={t.d} />
+                  </span>
+                </span>
               </li>
             ))}
           </ul>
+          <div className="mt-7 text-center">
+            <Link
+              href="/dat-lich"
+              className="inline-block whitespace-nowrap rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-ss-magenta/30 transition-transform hover:scale-105"
+            >
+              Đặt lịch ngay — tư vấn miễn phí
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -97,7 +122,7 @@ export default function HomePage() {
             Bạn đang băn khoăn điều gì?
           </h2>
           <p className="mt-2 text-ss-plum/60">
-            Chạm vào câu hỏi của bạn — Song Sát Tử Vi sẽ chỉ gói xem phù hợp nhất.
+            <Copy text="Chạm vào câu hỏi của bạn — Song Sát Tử Vi sẽ chỉ gói xem phù hợp nhất." />
           </p>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -112,7 +137,7 @@ export default function HomePage() {
               </span>
               <span className="flex-1">
                 <span className="block font-display text-lg font-bold leading-snug text-ss-plum">
-                  {w.q}
+                  <Copy text={w.q} />
                 </span>
                 <span className="mt-1.5 block text-xs font-semibold uppercase tracking-wide text-ss-magenta">
                   {w.tag}
@@ -134,7 +159,7 @@ export default function HomePage() {
               Gói được chọn nhiều nhất
             </h2>
             <p className="mt-2 text-ss-plum/60">
-              Chọn gói phù hợp với điều bạn đang muốn tỏ tường.
+              <Copy text="Chọn gói phù hợp với điều bạn đang muốn tỏ tường." />
             </p>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -156,7 +181,7 @@ export default function HomePage() {
       {/* QUY TRÌNH */}
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <h2 className="text-center font-display text-3xl font-bold text-ss-plum sm:text-4xl">
+          <h2 className="text-center font-display text-3xl font-bold text-ss-plum text-balance sm:text-4xl">
             Đặt lịch trong 3 bước
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -166,7 +191,7 @@ export default function HomePage() {
                   {s.n}
                 </div>
                 <h3 className="mt-4 font-display text-lg font-bold text-ss-plum">{s.t}</h3>
-                <p className="mt-1.5 text-sm text-ss-plum/70">{s.d}</p>
+                <p className="mt-1.5 text-sm text-ss-plum/70"><Copy text={s.d} /></p>
               </div>
             ))}
           </div>
@@ -191,8 +216,7 @@ export default function HomePage() {
             Muốn tự mình <span className="text-gold-gradient">luận giải</span>?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-ss-cream/80">
-            Không chỉ xem — bạn có thể học huyền học bài bản cùng Song Sát Tử Vi, đi từ nền
-            tảng đến ứng dụng thực chiến.
+            <Copy text="Không chỉ xem — bạn có thể học huyền học bài bản cùng Song Sát Tử Vi, đi từ nền tảng đến ứng dụng thực chiến." />
           </p>
           <Link
             href="/hoc-huyen-hoc"

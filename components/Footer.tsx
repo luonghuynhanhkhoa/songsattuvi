@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SITE } from "@/lib/site";
 import Brand from "@/components/Brand";
+import Copy from "@/components/Copy";
 
 export default function Footer() {
   const c = SITE.contact;
@@ -89,8 +90,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-5 text-center text-xs text-ss-cream/50">
-        © {new Date().getFullYear()} Song Sát Tử Vi · Hiểu mình — Nắm vận — Chủ động thay đổi cuộc sống
+      <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-ss-cream/50">
+        <Copy text={`© ${new Date().getFullYear()} Song Sát Tử Vi · Hiểu mình — Nắm vận — Chủ động thay đổi cuộc sống`} />
       </div>
     </footer>
   );

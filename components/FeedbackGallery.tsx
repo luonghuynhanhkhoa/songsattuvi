@@ -1,6 +1,7 @@
 import { FEEDBACK_IMAGES } from "@/lib/feedback";
 import { TESTIMONIALS } from "@/lib/testimonials";
 import { SITE } from "@/lib/site";
+import Copy from "@/components/Copy";
 
 /**
  * Khu "Cảm nhận khách hàng" — băng chuyền CHẠY NGANG tự động.
@@ -49,7 +50,7 @@ export default function FeedbackGallery({
               <span className="text-ss-purple/20">{"★".repeat(5 - t.stars)}</span>
             </div>
             <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-ss-plum/80">
-              “{t.quote}”
+              “<Copy text={t.quote} />”
             </blockquote>
             <figcaption className="mt-4 border-t border-ss-purple/10 pt-3">
               <div className="font-display text-sm font-bold text-ss-plum">{t.name}</div>
@@ -65,7 +66,7 @@ export default function FeedbackGallery({
           {title}
         </h2>
         <p className="mt-2 text-ss-plum/60">
-          {subtitle}
+          <Copy text={subtitle} />
         </p>
       </div>
 

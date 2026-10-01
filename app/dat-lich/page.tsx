@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
+import Copy from "@/components/Copy";
 
 export const metadata: Metadata = {
   title: "Đặt lịch",
@@ -33,10 +34,11 @@ export default function BookingPage() {
             Đặt lịch <span className="text-gold-gradient">xem</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-ss-cream/80">
-            Hãy nhắn tin trực tiếp cho Song Sát Tử Vi qua <b>Facebook</b> hoặc <b>Zalo</b> và
-            chia sẻ vấn đề mà bạn đang gặp khó khăn.
+            <Copy text="Hãy nhắn tin trực tiếp cho Song Sát Tử Vi qua" />{" "}
+            <b className="inline-block">Facebook</b> <Copy text="hoặc" /> <b className="inline-block">Zalo</b>{" "}
+            <Copy text="và chia sẻ vấn đề | mà bạn đang gặp khó khăn." />
             <br />
-            Song Sát Tử Vi sẽ tư vấn kỹ và hỗ trợ gói phù hợp cho bạn.
+            <Copy text="Song Sát Tử Vi sẽ tư vấn kỹ | và hỗ trợ gói phù hợp cho bạn." />
           </p>
         </div>
       </section>
@@ -65,13 +67,13 @@ export default function BookingPage() {
 
         <div className="mt-8 rounded-2xl border border-ss-purple/15 bg-white p-5 text-center shadow-sm">
           <p className="text-sm font-semibold text-ss-plum">
-            💡 Khi nhắn, bạn gửi giúp Song Sát Tử Vi:
+            <Copy text="💡 Khi nhắn, bạn gửi giúp Song Sát Tử Vi:" />
           </p>
           <p className="mt-2 text-sm leading-relaxed text-balance text-ss-plum/70">
-            Chia sẻ vấn đề đang gặp khó khăn hoặc điều mà bạn đang quan tâm nhất.
+            <Copy text="Chia sẻ vấn đề đang gặp khó khăn hoặc điều mà bạn đang quan tâm nhất." />
           </p>
           <p className="mt-1 text-sm leading-relaxed text-balance text-ss-plum/70">
-            Song Sát sẽ hỗ trợ và tư vấn gói đúng và phù hợp với vấn đề của bạn.
+            <Copy text="Song Sát sẽ hỗ trợ và tư vấn gói đúng và phù hợp với vấn đề của bạn." />
           </p>
         </div>
       </section>

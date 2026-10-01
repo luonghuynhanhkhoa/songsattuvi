@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { formatVND } from "@/lib/format";
 import type { Service } from "@/lib/services";
+import Copy from "@/components/Copy";
 
 const BADGE_CLS: Record<string, string> = {
   BEST: "bg-ss-gold text-ss-plum",
@@ -24,12 +25,12 @@ export default function ServiceCard({ s }: { s: Service }) {
         {s.icon}
       </div>
 
-      <h3 className="font-display text-xl font-bold text-ss-plum">{s.name}</h3>
-      <p className="mt-1 text-sm text-ss-plum/60">{s.tagline}</p>
+      <h3 className="font-display text-xl font-bold text-ss-plum"><Copy text={s.name} /></h3>
+      <p className="mt-1 text-sm text-ss-plum/60"><Copy text={s.tagline} /></p>
 
       {s.note && (
-        <p className="mt-2 inline-block rounded-full bg-ss-magenta/8 px-2.5 py-1 text-xs font-medium text-ss-magenta">
-          🎁 {s.note}
+        <p className="mt-2 inline-block rounded-2xl bg-ss-magenta/8 px-3 py-1.5 text-xs font-medium text-ss-magenta">
+          🎁 <Copy text={s.note} />
         </p>
       )}
 
@@ -37,7 +38,7 @@ export default function ServiceCard({ s }: { s: Service }) {
         {s.bullets.map((b, i) => (
           <li key={i} className="flex gap-2">
             <span className="mt-0.5 text-ss-magenta">✦</span>
-            <span>{b}</span>
+            <span><Copy text={b} /></span>
           </li>
         ))}
       </ul>

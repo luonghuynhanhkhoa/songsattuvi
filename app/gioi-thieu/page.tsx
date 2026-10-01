@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import FeedbackGallery from "@/components/FeedbackGallery";
 import Brand from "@/components/Brand";
+import Copy from "@/components/Copy";
 
 export const metadata: Metadata = {
   title: "Giới thiệu",
@@ -35,32 +36,36 @@ export default function AboutPage() {
             Về <Brand />
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-balance text-base font-medium text-ss-cream sm:text-lg">
-            {SITE.tagline}.
+            <Copy text={`${SITE.tagline}.`} />
           </p>
           <p className="mx-auto mt-2 max-w-2xl leading-relaxed text-ss-cream/75">
-            Song Sát Tử Vi kết hợp tử vi, kinh dịch, bói bài và nhân tướng học
+            <Copy text="Song Sát Tử Vi kết hợp tử vi, kinh dịch, | bói bài và nhân tướng học" />
             <br />
-            Giúp bạn nhìn rõ chính mình và con đường phía trước
+            <Copy text="Giúp bạn nhìn rõ chính mình | và con đường phía trước" />
             <br />
-            <em>Không xem cho biết, mà xem để hiểu, tháo gỡ và định hướng.</em>
+            <em>
+              <Copy text="Không xem cho biết, mà xem để hiểu, tháo gỡ và định hướng." />
+            </em>
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
         <div className="prose-ss space-y-4 text-center text-ss-plum/80">
-          <p className="text-lg leading-relaxed">
-            Mỗi người sinh ra đều mang một “lá số” riêng.
+          <p className="text-base leading-relaxed sm:text-lg">
+            <Copy text="Mỗi người sinh ra | đều mang một “lá số” riêng." />
             <br />
-            Hiểu được nó, bạn sẽ biết đâu là điểm mạnh
+            <Copy text="Hiểu được nó, | bạn sẽ biết đâu là điểm mạnh | để phát huy," />
             <br />
-            để phát huy, đâu là điều cần hóa giải và thời điểm nào nên tiến, nên lùi.
+            <Copy text="đâu là điều cần hóa giải | và thời điểm nào nên tiến, nên lùi." />
           </p>
           <p className="text-balance">
-            Song Sát Tử Vi ra đời với mong muốn đưa huyền học đến gần hơn một
-            cách <strong className="text-ss-purple">tử tế, chính xác và dễ áp dụng</strong>.
-            Không hù dọa, không mê tín, chỉ là những góc nhìn giúp bạn vững tâm
-            hơn trước mỗi quyết định của đời mình.
+            <Copy text="Song Sát Tử Vi ra đời với mong muốn | đưa huyền học đến gần hơn một cách" />{" "}
+            <strong className="text-ss-purple">
+              <Copy text="tử tế, chính xác và dễ áp dụng." />
+            </strong>{" "}
+            <Copy text="Không hù dọa, không mê tín," />{" "}
+            <Copy text="chỉ là những góc nhìn giúp bạn vững tâm | hơn trước mỗi quyết định của đời mình." />
           </p>
         </div>
 
@@ -70,7 +75,7 @@ export default function AboutPage() {
               key={v.title}
               className="inline-flex items-center gap-2 rounded-full border border-ss-purple/15 bg-ss-cream px-4 py-2 text-sm font-medium text-ss-plum"
             >
-              <span>{v.icon}</span> {v.title}
+              <span>{v.icon}</span> <span className="whitespace-nowrap">{v.title}</span>
             </span>
           ))}
         </div>
@@ -78,7 +83,7 @@ export default function AboutPage() {
 
       <section className="bg-gradient-to-b from-ss-cream to-white py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <h2 className="text-center font-display text-3xl font-bold text-ss-plum">
+          <h2 className="text-center font-display text-3xl font-bold text-ss-plum text-balance">
             Vì sao chọn Song Sát Tử Vi?
           </h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -88,8 +93,8 @@ export default function AboutPage() {
                   {w.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-ss-plum">{w.t}</h3>
-                  <p className="mt-1 text-sm text-ss-plum/70">{w.d}</p>
+                  <h3 className="font-display text-lg font-bold text-ss-plum text-balance">{w.t}</h3>
+                  <p className="mt-1 text-sm text-ss-plum/70"><Copy text={w.d} /></p>
                 </div>
               </div>
             ))}
@@ -101,7 +106,7 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <div className="bg-mystic rounded-3xl px-6 py-12 text-center text-ss-cream sm:px-12">
-          <h2 className="font-display text-3xl font-bold">Sẵn sàng hiểu rõ vận mệnh của bạn?</h2>
+          <h2 className="font-display text-3xl font-bold text-balance">Sẵn sàng hiểu rõ vận mệnh của bạn?</h2>
           <Link
             href="/dat-lich"
             className="mt-6 inline-block rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-8 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105"
