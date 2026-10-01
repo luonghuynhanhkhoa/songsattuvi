@@ -22,9 +22,10 @@ const display = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE.name} — ${SITE.subTagline}`,
+    default: SITE.name,
     template: `%s · ${SITE.name}`,
   },
+  applicationName: SITE.name,
   description: SITE.description,
 };
 
