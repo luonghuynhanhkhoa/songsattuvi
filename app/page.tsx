@@ -42,14 +42,17 @@ const HERO_PACKS = [
 /** Các gói còn lại — mỗi thẻ là một câu hỏi đánh vào nỗi băn khoăn thật, dẫn thẳng tới gói. */
 const WORRIES = [
   { icon: "🧭", q: "Vì sao người khác đi thuận, còn mình mãi loay hoay?", tag: "Định Vị Cuộc Đời", slug: "dinh-vi-cuoc-doi" },
-  { icon: "💖", q: "Tình duyên của mình khi nào gặp đúng người?", tag: "Tình yêu & hôn nhân", slug: "tu-vi-le" },
-  { icon: "💼", q: "Công việc, tiền bạc có đang đi sai hướng?", tag: "Sự nghiệp & tài chính", slug: "tu-vi-le" },
+  { icon: "💖", q: "Tình duyên của mình khi nào gặp đúng người?", tag: "Tình Yêu & Hôn Nhân", slug: "tinh-yeu-hon-nhan" },
+  { icon: "💼", q: "Công việc, tiền bạc có đang đi sai hướng?", tag: "Sự Nghiệp – Tài Chính", slug: "su-nghiep-tai-chinh" },
   { icon: "📅", q: "12 tháng tới, tháng nào thuận, tháng nào nên dè chừng?", tag: "Vận Hạn 12 Tháng", slug: "van-han-12-thang" },
   { icon: "🏠", q: "Gia đạo, hôn nhân có đang bền hay tiềm ẩn rạn nứt?", tag: "Gia Đạo – Hôn Nhân", slug: "gia-dao" },
   { icon: "☯", q: "Đang phân vân một quyết định lớn, chọn bên nào mới đúng?", tag: "Kinh Dịch", slug: "kinh-dich" },
   { icon: "🌙", q: "Nhiều điều muốn hỏi cùng lúc, hỏi một lần được không?", tag: "Bói Bài Tổng Hợp", slug: "boi-bai-tong-hop" },
   { icon: "⏳", q: "Chưa chắc giờ sinh của mình, lá số lệch thì sao?", tag: "Dò Giờ Sinh", slug: "do-gio-sinh" },
-  { icon: "🃏", q: "Chỉ một câu hỏi đang day dứt, cần lời đáp thẳng thắn?", tag: "Bói Bài Tarot / Tây", slug: "boi-bai-tarot-tay" },
+  { icon: "🏡", q: "Muốn mua nhà, mua đất — khi nào, hướng nào mới hợp?", tag: "Nhà Cửa – Đất Đai", slug: "nha-cua-dat-dai" },
+  { icon: "✈️", q: "Có duyên đi xa không, hay chỉ hợp ở lại?", tag: "Xuất Ngoại", slug: "xuat-ngoai" },
+  { icon: "📚", q: "Con đường học nào thật sự hợp với năng lực của mình?", tag: "Học Tập & Phát Triển", slug: "hoc-tap-phat-trien" },
+  { icon: "👶", q: "Duyên con cái của mình ra sao, năm nào nên lên kế hoạch?", tag: "Sinh Sản – Con Cái", slug: "sinh-san-con-cai" },
 ];
 
 const TRUST = [

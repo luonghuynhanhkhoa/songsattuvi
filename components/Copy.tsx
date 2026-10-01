@@ -7,6 +7,7 @@ import { Fragment } from "react";
  *   khung mới bị bẻ bên trong).
  * - Mặc định tự chia sau dấu , ; : . ? ! — – · (dấu luôn nằm cuối dòng trước),
  *   cụm quá ngắn được gộp vào cụm kế tiếp.
+ *   Câu dài hơn 70 ký tự thì xuống dòng tự nhiên (không cắt theo cụm).
  *   Muốn tự quyết ranh giới cụm thì đặt dấu `|` trong chuỗi (khi có `|` thì
  *   KHÔNG tự chia theo dấu câu nữa).
  * - Dính liền bằng khoảng trắng không ngắt (NBSP): tên "Song Sát Tử Vi", các
@@ -19,9 +20,10 @@ const TERMS =
   /(tử vi|kinh dịch|bói bài|bài tây|huyền học|chỉ tay|nhân tướng|lá số|đại vận|vận hạn|vận mệnh|gia đạo|hôn nhân|tình duyên|sự nghiệp|tài chính|giờ sinh)/gi;
 
 export function glue(s: string) {
+  // Tên thương hiệu trước (để TERMS không làm "Tử Vi" mất khớp với tên đầy đủ).
   return s
-    .replace(TERMS, (m) => m.replace(/ /g, NBSP))
     .replace(/Song Sát Tử Vi/g, ["Song", "Sát", "Tử", "Vi"].join(NBSP))
+    .replace(TERMS, (m) => m.replace(/ /g, NBSP))
     .replace(/(\d)[ \t]+(?=\S)/g, "$1" + NBSP);
 }
 
@@ -45,6 +47,9 @@ function mergeShort(parts: string[]) {
 
 export default function Copy({ text }: { text: string }) {
   const g = glue(text);
+  // Câu dài (không đánh dấu `|`): để trình duyệt tự xuống dòng cho đều,
+  // các cụm từ quan trọng vẫn dính liền nhờ glue().
+  if (!g.includes("|") && g.length > 70) return <>{g}</>;
   const parts = g.includes("|")
     ? g.split(/ *\| */).filter(Boolean)
     : mergeShort(g.split(/(?<=[,;:.?!…—–·]) +/).filter(Boolean));
