@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageGuard from "@/components/ImageGuard";
-import ZaloFloat from "@/components/ZaloFloat";
+import ContactFloat from "@/components/ContactFloat";
 import { SITE } from "@/lib/site";
 
 const body = Be_Vietnam_Pro({
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <ZaloFloat />
+        <ContactFloat />
       </body>
     </html>
   );

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-import { SERVICES } from "@/lib/services";
-import ServiceCard from "@/components/ServiceCard";
+import { getService } from "@/lib/services";
+import { formatVND } from "@/lib/format";
 import FeedbackGallery from "@/components/FeedbackGallery";
-import Copy from "@/components/Copy";
+import Copy, { glue } from "@/components/Copy";
 
 const STEPS = [
   { n: "1", t: "Chọn gói", d: "Xem trước các gói và chọn gói phù hợp với điều bạn đang quan tâm." },
@@ -11,14 +11,45 @@ const STEPS = [
   { n: "3", t: "Xác nhận & xem", d: "Song Sát Tử Vi phản hồi, xác nhận lịch và đồng hành cùng bạn." },
 ];
 
-/** Những câu hỏi "đập vào nhu cầu" — mỗi thẻ dẫn thẳng tới gói phù hợp. */
+/** 2 gói nên xem nhất — đứng đầu, trình bày đầy đủ + đánh vào tâm lý. */
+const HERO_PACKS = [
+  {
+    slug: "tu-vi-toan-dien",
+    badge: "👑 GÓI NÊN XEM NHẤT",
+    q: "Rối nhiều chuyện cùng lúc, không biết bắt đầu từ đâu?",
+    d: "Xem 1 lần — thấy rõ cả bản mệnh, công việc, tiền bạc, tình cảm, gia đạo và đại vận 10 năm. Đỡ sai nhiều năm.",
+    bullets: [
+      "Bản mệnh gốc — vì sao bạn hay gặp những chuyện này",
+      "Đại vận 10 năm — | lúc nên tiến, lúc nên giữ",
+      "Hướng đi phù hợp để đỡ sai nhất",
+    ],
+    cta: "Đặt lịch Tử Vi Toàn Diện",
+  },
+  {
+    slug: "chi-tay-nhan-tuong",
+    badge: "🔥 HOT",
+    q: "Bạn đã thật sự hiểu con người mình chưa?",
+    d: "Chỉ tay, nhân tướng và bài Tây trong một buổi — nhìn ra tính cách, vận mệnh, cơ hội và cả thách thức đang chờ bạn.",
+    bullets: [
+      "Chỉ tay — hé lộ bức tranh nền của cuộc đời",
+      "Nhân tướng — soi rõ con người thật phía sau vẻ ngoài",
+      "Bài Tây — đi thẳng vào điều bạn đang băn khoăn nhất",
+    ],
+    cta: "Đặt lịch Chỉ Tay – Nhân Tướng",
+  },
+];
+
+/** Các gói còn lại — mỗi thẻ là một câu hỏi đánh vào nỗi băn khoăn thật, dẫn thẳng tới gói. */
 const WORRIES = [
-  { icon: "🧭", q: "Vì sao người khác đi thuận, còn mình mãi loay hoay?", tag: "Định vị cuộc đời", slug: "dinh-vi-cuoc-doi" },
+  { icon: "🧭", q: "Vì sao người khác đi thuận, còn mình mãi loay hoay?", tag: "Định Vị Cuộc Đời", slug: "dinh-vi-cuoc-doi" },
   { icon: "💖", q: "Tình duyên của mình khi nào gặp đúng người?", tag: "Tình yêu & hôn nhân", slug: "tu-vi-le" },
   { icon: "💼", q: "Công việc, tiền bạc có đang đi sai hướng?", tag: "Sự nghiệp & tài chính", slug: "tu-vi-le" },
-  { icon: "📅", q: "Năm nay vận hạn của mình ra sao?", tag: "Vận hạn 12 tháng", slug: "van-han-12-thang" },
-  { icon: "🏠", q: "Nhà cửa, gia đạo có đang cản vận?", tag: "Gia đạo", slug: "gia-dao" },
-  { icon: "🔮", q: "Rối nhiều mặt, không biết bắt đầu từ đâu?", tag: "Tử Vi Toàn Diện", slug: "tu-vi-toan-dien" },
+  { icon: "📅", q: "12 tháng tới, tháng nào thuận, tháng nào nên dè chừng?", tag: "Vận Hạn 12 Tháng", slug: "van-han-12-thang" },
+  { icon: "🏠", q: "Gia đạo, hôn nhân có đang bền hay tiềm ẩn rạn nứt?", tag: "Gia Đạo – Hôn Nhân", slug: "gia-dao" },
+  { icon: "☯", q: "Đang phân vân một quyết định lớn, chọn bên nào mới đúng?", tag: "Kinh Dịch", slug: "kinh-dich" },
+  { icon: "🌙", q: "Nhiều điều muốn hỏi cùng lúc, hỏi một lần được không?", tag: "Bói Bài Tổng Hợp", slug: "boi-bai-tong-hop" },
+  { icon: "⏳", q: "Chưa chắc giờ sinh của mình, lá số lệch thì sao?", tag: "Dò Giờ Sinh", slug: "do-gio-sinh" },
+  { icon: "🃏", q: "Chỉ một câu hỏi đang day dứt, cần lời đáp thẳng thắn?", tag: "Bói Bài Tarot / Tây", slug: "boi-bai-tarot-tay" },
 ];
 
 const TRUST = [
@@ -28,8 +59,6 @@ const TRUST = [
 ];
 
 export default function HomePage() {
-  const featured = SERVICES.filter((s) => s.featured);
-
   return (
     <>
       {/* HERO — câu hỏi gợi tò mò + ảnh feedback ngay màn hình đầu */}
@@ -115,7 +144,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BẠN ĐANG BĂN KHOĂN ĐIỀU GÌ */}
+      {/* BẠN ĐANG BĂN KHOĂN ĐIỀU GÌ — 2 gói nên xem đứng đầu */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-ss-plum text-balance sm:text-4xl">
@@ -125,7 +154,68 @@ export default function HomePage() {
             <Copy text="Chạm vào câu hỏi của bạn — Song Sát Tử Vi sẽ chỉ gói xem phù hợp nhất." />
           </p>
         </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+        <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          {HERO_PACKS.map((h) => {
+            const s = getService(h.slug);
+            if (!s) return null;
+            return (
+              <div
+                key={h.slug}
+                className="bg-mystic relative flex flex-col overflow-hidden rounded-3xl p-6 text-ss-cream shadow-2xl shadow-ss-plum/30 ring-2 ring-ss-gold/70 sm:p-8"
+              >
+                <span className="mb-4 self-start rounded-full sm:absolute sm:right-5 sm:top-5 sm:mb-0 bg-gradient-to-r from-ss-gold to-ss-gold-deep px-3 py-1 text-[11px] font-extrabold tracking-wide text-ss-plum shadow">
+                  {h.badge}
+                </span>
+                <div className="flex items-center gap-2.5">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gradient-to-br from-ss-gold to-ss-gold-deep text-xl shadow-md">
+                    {s.icon}
+                  </span>
+                  <span className="text-xs sm:pr-28 font-bold uppercase tracking-wider text-ss-gold">
+                    {s.name}
+                  </span>
+                </div>
+                <h3 className="mt-5 font-display text-2xl font-extrabold leading-snug text-balance sm:text-3xl">
+                  {h.q}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-ss-cream/85 sm:text-base">
+                  {glue(h.d)}
+                </p>
+                <ul className="mt-4 flex-1 space-y-2 text-sm text-ss-cream/90">
+                  {h.bullets.map((b) => (
+                    <li key={b} className="flex gap-2">
+                      <span className="mt-0.5 text-ss-gold">✦</span>
+                      <span>
+                        <Copy text={b} />
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                {s.note && (
+                  <p className="mt-4 rounded-2xl bg-white/10 px-3 py-2 text-xs text-ss-gold">
+                    🎁 <Copy text={s.note} />
+                  </p>
+                )}
+                <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-white/15 pt-5">
+                  <span className="text-gold-gradient font-display text-3xl font-extrabold">
+                    {formatVND(s.price)}
+                  </span>
+                  <Link
+                    href={`/dat-lich?goi=${s.slug}`}
+                    className="whitespace-nowrap rounded-full bg-gradient-to-r from-ss-purple to-ss-magenta px-6 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105"
+                  >
+                    {h.cta} →
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <p className="mt-12 text-center font-display text-lg font-bold text-ss-plum text-balance sm:text-xl">
+          Hoặc chọn theo điều bạn đang muốn tỏ tường
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {WORRIES.map((w) => (
             <Link
               key={w.q}
@@ -136,8 +226,8 @@ export default function HomePage() {
                 {w.icon}
               </span>
               <span className="flex-1">
-                <span className="block font-display text-lg font-bold leading-snug text-ss-plum">
-                  <Copy text={w.q} />
+                <span className="block font-display text-lg font-bold leading-snug text-ss-plum text-balance">
+                  {w.q}
                 </span>
                 <span className="mt-1.5 block text-xs font-semibold uppercase tracking-wide text-ss-magenta">
                   {w.tag}
@@ -149,32 +239,13 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
-      </section>
-
-      {/* GÓI NỔI BẬT */}
-      <section className="bg-gradient-to-b from-ss-blush/60 to-transparent py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="text-center">
-            <h2 className="font-display text-3xl font-bold text-ss-plum sm:text-4xl">
-              Gói được chọn nhiều nhất
-            </h2>
-            <p className="mt-2 text-ss-plum/60">
-              <Copy text="Chọn gói phù hợp với điều bạn đang muốn tỏ tường." />
-            </p>
-          </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {featured.map((s) => (
-              <ServiceCard key={s.slug} s={s} />
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link
-              href="/goi-dich-vu"
-              className="inline-block rounded-full border border-ss-purple/30 px-6 py-2.5 text-sm font-semibold text-ss-purple transition-colors hover:bg-ss-purple/5"
-            >
-              Xem tất cả gói →
-            </Link>
-          </div>
+        <div className="mt-8 text-center">
+          <Link
+            href="/goi-dich-vu"
+            className="inline-block rounded-full border border-ss-purple/30 px-6 py-2.5 text-sm font-semibold text-ss-purple transition-colors hover:bg-ss-purple/5"
+          >
+            Xem tất cả gói →
+          </Link>
         </div>
       </section>
 
